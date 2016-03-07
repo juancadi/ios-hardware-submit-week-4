@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarkingRoute" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CFb-AF-uIb">
+                                <rect key="frame" x="0.0" y="570" width="600" height="31"/>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                            </segmentedControl>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VSc-ks-fP4">
+                                <rect key="frame" x="0.0" y="20" width="600" height="550"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VSc-ks-fP4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jif-P0-vDP"/>
+                            <constraint firstItem="CFb-AF-uIb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="U0b-FE-Hfr"/>
+                            <constraint firstItem="CFb-AF-uIb" firstAttribute="top" secondItem="VSc-ks-fP4" secondAttribute="bottom" id="Vge-lr-tMz"/>
+                            <constraint firstItem="VSc-ks-fP4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Y83-Kc-9tk"/>
+                            <constraint firstItem="VSc-ks-fP4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="dwb-0K-GJd"/>
+                            <constraint firstItem="CFb-AF-uIb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ea5-HG-pxt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CFb-AF-uIb" secondAttribute="bottom" id="tPr-YH-yfX"/>
+                            <constraint firstItem="CFb-AF-uIb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" id="yCI-bF-NTG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="VSc-ks-fP4" id="uHd-vS-BPx"/>
+                        <outlet property="mapTypeSegmentedControl" destination="CFb-AF-uIb" id="O9x-lj-dt5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
